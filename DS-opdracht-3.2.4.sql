@@ -1,0 +1,1 @@
+SELECT s.name, s.straat, s.huisnr, s.postcode FROM mhl_suppliers s JOIN mhl_cities c_vestiging ON s.city_ID = c_vestiging.id JOIN mhl_cities c_postbus ON s.p_city_ID = c_postbus.id WHERE c_vestiging.name = 'Amsterdam' OR c_postbus.name = 'Den Haag';
