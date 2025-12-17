@@ -1,0 +1,2 @@
+SELECT * FROM mhl_communes WHERE name LIKE '%Steenwijkerland%';
+SELECT c.name, COUNT(s.id) AS aantal FROM mhl_cities c LEFT JOIN mhl_suppliers s ON s.city_ID = c.id WHERE c.commune_ID = 394 GROUP BY c.name;
