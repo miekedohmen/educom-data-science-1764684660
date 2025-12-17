@@ -1,0 +1,1 @@
+SELECT DISTINCT s.name, s.straat, s.huisnr, s.postcode FROM mhl_suppliers s JOIN mhl_yn_properties yp ON s.id = yp.supplier_ID JOIN mhl_propertytypes pt ON yp.propertytype_ID = pt.id WHERE (pt.name = 'specialistische leverancier' OR pt.name = 'ook voor particulieren') AND yp.content = 'Y';
