@@ -1,0 +1,1 @@
+SELECT name, id, commune_ID FROM mhl_cities WHERE name IN ( SELECT name FROM mhl_cities GROUP BY name HAVING COUNT(*) > 1 ) ORDER BY name ASC, id ASC;

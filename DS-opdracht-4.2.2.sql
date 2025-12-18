@@ -1,0 +1,1 @@
+SELECT c.name AS stad, IFNULL(m.name, 'INVALID') AS gemeente, IFNULL(d.name, 'INVALID') AS provincie FROM mhl_cities c LEFT JOIN mhl_communes m ON c.commune_ID = m.id LEFT JOIN mhl_districts d ON m.district_ID = d.id;
