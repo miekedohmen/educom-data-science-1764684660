@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS amount_records, MIN(hitcount) AS min_hitcount, MAX(hitcount) AS max_hitcount, AVG(hitcount) AS average_hitcount, SUM(hitcount) AS total_hitcount FROM mhl_hitcount;

@@ -1,0 +1,1 @@
+SELECT s.name AS supplier, SUM(h.hitcount) AS total_hits, COUNT(h.month) AS amount_months, AVG(h.hitcount) AS average_hitcount FROM mhl_hitcount h JOIN mhl_suppliers s ON h.supplier_ID = s.id GROUP BY s.id, s.name HAVING total_hits > 100 ORDER BY total_hits DESC;
