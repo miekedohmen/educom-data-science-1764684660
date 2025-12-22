@@ -1,0 +1,1 @@
+SELECT r.name AS rubriek_naam, COUNT(sc.mhl_suppliers_id) AS aantal_leveranciers FROM mhl_rubrieken r LEFT JOIN mhl_suppliers_mhl_rubriek_view sc ON r.id = sc.mhl_rubriek_view_ID GROUP BY r.id, r.name ORDER BY rubriek_naam ASC;

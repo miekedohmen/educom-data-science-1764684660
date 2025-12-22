@@ -1,0 +1,1 @@
+SELECT v.id, s.name AS leverancier, COALESCE(d.contact, 't.a.v. de directie') AS aanhef, v.adres, v.postcode, v.stad FROM VERZENDLIJST v JOIN mhl_suppliers s ON v.id = s.id LEFT JOIN DIRECTIE d ON v.id = d.supplier_ID ORDER BY v.stad, s.name;

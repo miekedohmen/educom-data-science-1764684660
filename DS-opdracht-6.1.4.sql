@@ -1,0 +1,1 @@
+SELECT r.name AS rubriek_naam, COALESCE(CAST(SUM(h.hitcount) AS CHAR), 'Geen hits') AS totale_hitcount FROM mhl_rubrieken r LEFT JOIN mhl_suppliers_mhl_rubriek_view sc ON r.id = sc.mhl_rubriek_view_ID LEFT JOIN mhl_hitcount h ON sc.mhl_suppliers_ID = h.supplier_ID GROUP BY r.id, r.name ORDER BY rubriek_naam ASC;

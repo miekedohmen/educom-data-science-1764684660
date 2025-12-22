@@ -1,0 +1,1 @@
+CREATE VIEW VERZENDLIJST AS SELECT s.id, IF(s.p_address <> '', s.p_address, CONCAT(s.straat, ' ', s.huisnr)) AS adres, IF(s.p_address <> '', s.p_postcode, s.postcode) AS postcode, IF(s.p_address <> '', cp.name, cv.name) AS stad FROM mhl_suppliers s LEFT JOIN mhl_cities cv ON s.city_ID = cv.id LEFT JOIN mhl_cities cp ON s.p_city_ID = cp.id;
