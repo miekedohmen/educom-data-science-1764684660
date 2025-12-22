@@ -1,0 +1,1 @@
+SELECT CASE WEEKDAY(joindate) WHEN 0 THEN 'Maandag' WHEN 1 THEN 'Dinsdag' WHEN 2 THEN 'Woensdag' WHEN 3 THEN 'Donderdag' WHEN 4 THEN 'Vrijdag' WHEN 5 THEN 'Zaterdag' WHEN 6 THEN 'Zondag' END AS dag_van_de_week, COUNT(id) AS aantal_leveranciers FROM mhl_suppliers GROUP BY WEEKDAY(joindate), dag_van_de_week ORDER BY WEEKDAY(joindate) ASC;
