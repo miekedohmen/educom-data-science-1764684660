@@ -1,0 +1,1 @@
+SELECT c.name AS stad, SUM(m.name = 'Gold') AS Gold, SUM(m.name = 'Silver') AS Silver, SUM(m.name = 'Bronze') AS Bronze, SUM(m.name NOT IN ('Gold', 'Silver', 'Bronze')) AS Other FROM mhl_suppliers s JOIN mhl_cities c ON s.city_ID = c.id JOIN mhl_membertypes m ON s.membertype = m.id GROUP BY c.name ORDER BY Gold DESC, Silver DESC, Bronze DESC, Other DESC;

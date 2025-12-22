@@ -1,0 +1,1 @@
+SELECT s.name, c.name AS city_name, p.name AS province_name FROM mhl_suppliers s JOIN mhl_cities c ON s.city_id = c.id JOIN mhl_communes com ON c.commune_id = com.id JOIN mhl_districts p ON com.district_id = p.id;
