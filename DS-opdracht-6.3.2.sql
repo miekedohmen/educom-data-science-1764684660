@@ -1,0 +1,1 @@
+SELECT name, REPLACE( REPLACE( REPLACE( REPLACE(name, '&eacute;', 'é'), '&rsquo;', '’'), '&amp;', '&'), '&agrave;', 'à') AS schone_naam FROM mhl_suppliers WHERE name LIKE '%&%;' LIMIT 25;
